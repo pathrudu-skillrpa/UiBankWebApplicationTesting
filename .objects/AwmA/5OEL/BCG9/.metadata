@@ -1,0 +1,15 @@
+﻿{
+  "Name": "UiBank Home Screen",
+  "Type": "Screen",
+  "Id": "BCG9P2cOZUyQD_RPJCaEIg",
+  "Reference": "LZ6uGRrXXkiNGAZ-m9Hvyg/BCG9P2cOZUyQD_RPJCaEIg",
+  "ParentRef": "LZ6uGRrXXkiNGAZ-m9Hvyg/5OELtpoctEyywkHqinKCEQ",
+  "Created": "2025-05-22T14:52:59.2267593Z",
+  "Updated": "2025-05-22T14:53:08.9255979Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

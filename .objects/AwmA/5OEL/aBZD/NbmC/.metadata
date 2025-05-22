@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Congrats! You've been a…",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "NbmCo4AzI068eAnFHLFr5A",
+  "Reference": "LZ6uGRrXXkiNGAZ-m9Hvyg/NbmCo4AzI068eAnFHLFr5A",
+  "ParentRef": "LZ6uGRrXXkiNGAZ-m9Hvyg/aBZDXEKX1kKDrYANYSweQw",
+  "Created": "2025-05-22T14:59:33.8257352Z",
+  "Updated": "2025-05-22T14:59:33.8257352Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

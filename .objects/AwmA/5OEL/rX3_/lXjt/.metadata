@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Sign In",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "lXjto8dAp0ORk_nWqj2Umw",
+  "Reference": "LZ6uGRrXXkiNGAZ-m9Hvyg/lXjto8dAp0ORk_nWqj2Umw",
+  "ParentRef": "LZ6uGRrXXkiNGAZ-m9Hvyg/rX3_zruR_UGwzg9qIJn3TA",
+  "Created": "2025-05-22T14:51:08.0824934Z",
+  "Updated": "2025-05-22T14:51:08.0824934Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

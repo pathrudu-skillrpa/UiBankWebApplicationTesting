@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Email Address of Reques…",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "HPpjISKyj06lScgUmOheeQ",
+  "Reference": "LZ6uGRrXXkiNGAZ-m9Hvyg/HPpjISKyj06lScgUmOheeQ",
+  "ParentRef": "LZ6uGRrXXkiNGAZ-m9Hvyg/L1M4n02jjkGDE9iqPJss4g",
+  "Created": "2025-05-22T14:57:56.0720834Z",
+  "Updated": "2025-05-22T14:57:56.0720834Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

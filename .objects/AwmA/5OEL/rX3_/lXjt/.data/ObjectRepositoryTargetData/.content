@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YwXbWQVf_EePfgwNyjMLXg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="564, 610, 101, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" Guid="535f5615-8344-4e5f-a042-42adfc7c211f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGkAAAA2CAYAAADEWrcYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOCSURBVHhe7Zk9aNtAFMc1ZPDoqRU00Bi6mKYQlS4Za2hKDS00S4vTDMV4Ch2C6VC8mgzBZCglQzDZkiGgbvJQcMZ0CGgxOEPASwcNHTRkENjDv8j68FlSnEbIll/yfvAG3+me5fv5dB+SBp+eg2OK8fEZ+u8eo/9aRn/tQayQQkk5Eg4Fgw/L6L9bii3Kl8TMHyyJACyJACyJACyJACyJACyJACyJACyJACyJACyJACyJACyJACyJAN6pOUuaY/pvl9Bfe8iS5pnhe6jiI5Y0zww27BeGT+dPknlahbIoQ6moMAbB2vvF0M3GSgqSrgzoLRXqiQrt3IA1JuIM1awESXKi3BLrpokF0zBg2GFawcrU8NzMTtLAhLad9wX4sZBH9dR0L7KgVWSnPFuC5hVPHQ0l7342tWBlasxcknFQEMRkIcsZQVYBzT+jay3TDIywacOSbEVovvSE5FG/cErPvrqjRpKg7PWGZdqmd10JfncNR6GC7IJbl1FQbZ2hvux+Xm5g2PqygbybL7/ThlpRkPE6f3Edjd/XDc0ISbFzJUeKkjIoHvRw3ZM/LMmEtpkVRl1EREiKDgWNy+A32kyWFB3X5UqOGUsCzOPi+I/M5FDYbkI3xnWFJHVqyPntcijv24uOHyg/EXJFSpKxvq+j19FQezWSLH/Tx77P4SZJt8mVHDOXZGP8LEPJCJ3rRu5LG97DIyipt6f4161+N0bJzCaKkySJc4vRRCGq3OcGSbfKlRypSHKwYJyraFRWIQuiCoeOgJCkXW9FmEO9I+bpoTFpTtp15jiHCAljRNTHzpUcM5ZkofvL2RupJ210r9zi063RZOz+4JAkYSQVD4XJ+uoI615blpQEFo7ee50vQdnRYVkW9J2RAO/5HpQ0Picp2Gp1YQTmBpaUFBcNKH5nB2O0TwpJirm6u13HRtTHzpUcs5dkj6dOE6UVcRMrIbNShipsZMOS7Ls1oFaE04oFGaXj9uR90q06NqI+dq7kSEWSiBXrjMyC+ddrp6MmByTdMVKX9N+IS94XdejDRYcF46SE7Iz+0WlBR5J96Pp50pyUQ+082OZuQEiSfbddNN+Mzvn8sE/QW9M/Q0sLWpJcLLMnvIvqIda0RgiSku4bLIkALIkALIkALIkALIkALIkALIkALIkALIkALIkALIkALIkALIkALIkAIUkc8xssiUD8A/LlDk8pHIP8AAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='UiBank-Welcome' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive">
+      <TargetAnchorable.PointOffset>
+        <PointOffset />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="b37e9ac3fcf2beaa365c9bba9f9d0c7f.png" xmlns="">0DVkgWNrgAEuueVJNEIRikw</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

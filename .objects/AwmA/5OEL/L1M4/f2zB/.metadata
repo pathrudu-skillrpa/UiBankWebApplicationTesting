@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Submit Loan Application",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "f2zBCa8ry0yVWapXgEgjyQ",
+  "Reference": "LZ6uGRrXXkiNGAZ-m9Hvyg/f2zBCa8ry0yVWapXgEgjyQ",
+  "ParentRef": "LZ6uGRrXXkiNGAZ-m9Hvyg/L1M4n02jjkGDE9iqPJss4g",
+  "Created": "2025-05-22T14:57:56.2230625Z",
+  "Updated": "2025-05-22T14:57:56.2230625Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
