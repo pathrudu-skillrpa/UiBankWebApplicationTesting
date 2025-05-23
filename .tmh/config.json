@@ -1,3 +1,9 @@
 {
-  "issueKeyTestcaseValues": {}
+  "issueKeyTestcaseValues": {},
+  "testManagerBasePath": "https://staging.uipath.com/skillrpa/DefaultTenant/testmanager_",
+  "defaultProject": {
+    "id": "f3aab833-0982-0000-d663-0b480098e655",
+    "name": "UiBank Application Testing",
+    "key": "UAT"
+  }
 }

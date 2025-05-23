@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Welcome",
+  "Type": "Element",
+  "TaxonomyType": "Text",
+  "Id": "VPCMJrBrrkSKTT3Aadoz_g",
+  "Reference": "LZ6uGRrXXkiNGAZ-m9Hvyg/VPCMJrBrrkSKTT3Aadoz_g",
+  "ParentRef": "LZ6uGRrXXkiNGAZ-m9Hvyg/BCG9P2cOZUyQD_RPJCaEIg",
+  "Created": "2025-05-23T14:58:20.9772889Z",
+  "Updated": "2025-05-23T14:59:06.3029863Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
