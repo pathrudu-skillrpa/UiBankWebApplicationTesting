@@ -48,6 +48,17 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "UiBank Login Test Case.xaml"
+      },
+      {
+        "templateType": "TestCase",
+        "fileName": ".templates\\TestAutomationTemplate.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "39e3457d-c5a5-4f9a-a140-625fa920df0c",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "LoanApplicationUnderAged.xaml"
       }
     ],
     "saveToCloud": false

@@ -1,0 +1,21 @@
+﻿[
+	{
+		"Name": "UiBankURL",
+		"Asset": "UiBankApplicationURL",
+		"OrchestratorAssetFolder": "Shared",
+		"Description": "URL of UiBank Application"
+	},
+	{
+		"Name": "Asset2",
+		"Asset": "",
+		"OrchestratorAssetFolder": "Shared",
+		"Description": "Asset 2 contains asset data information"
+	},
+	
+		{
+		"Name": "Asset3",
+		"Asset": "",
+		"OrchestratorAssetFolder": "Shared",
+		"Description": "Asset 3 contains asset data information"
+	}
+]
