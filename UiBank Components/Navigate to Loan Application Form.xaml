@@ -1,4 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Navigate_to_Loan_Application_Form" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Navigate_to_Loan_Application_Form_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Navigate_to_Loan_Application_Form" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_BrowserType" Type="InArgument(uix:NBrowserType)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Navigate_to_Loan_Application_Form_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -84,25 +91,26 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Navigate_to_Loan_Application_Form" sap:VirtualizedContainerService.HintSize="1334,965" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Navigate_to_Loan_Application_Form" sap:VirtualizedContainerService.HintSize="1471,1088" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="ApplyLoanScreen" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="954,525" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="0591fdf5-55a2-47da-81bc-c0023393e2ea" Version="V2">
+    <uix:NSetRuntimeBrowser BrowserType="[in_BrowserType]" DisplayName="Set Runtime Browser" sap:VirtualizedContainerService.HintSize="954,119" sap2010:WorkflowViewState.IdRef="NSetRuntimeBrowser_1" Version="V4" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="ApplyLoanScreen" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="954,529" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="0591fdf5-55a2-47da-81bc-c0023393e2ea" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,276" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,280" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Apply For A Loan'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,216" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Apply For A Loan'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="uibank.uipath.com/loans" ContentHash="6VnpTLT2LUm2IJVEDgDccQ" DesignTimeRectangle="746, 551, 182, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl id='applyButton' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='applyButton' tag='BUTTON' type='submit' class='btn btn-white btn-xl' aaname='Apply For A Loan' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Apply For A Loan' /&gt;" Guid="9efd5b96-ee99-41e5-a41d-725604fef384" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALoAAAA2CAYAAABwfINSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAZOSURBVHhe7Zo9aBtJFMdVuNhS1bGFiwhSRODCgiui0oYcWJDCgitO4MKIFMGkMOKKsKQLKYK4IggXh0gRkAvDXhHYFAGnOZCLgBuDXBjkwsUWKbZwITgX/2O1OztvZj9k469Y837wwHhnZ9/M/ufNm6ct/ffbL2Bjm3cr6f9gY5tHS4TOMPMIC50xAhY6YwQsdMYIWOiMEbDQGSNgoTNGwEJnjICFzhgBC50xAhY6YwQsdMYIWOiMEbDQGSNgoTNGwEJnjICFzhgBC50xgnsV+iTw4fuRBef61dtjvNOAvWjDXmygd6pfvQIXEwSx/2kLMLnQb7h5Jj/IHE70qzrE39mN54r7E/rFPrasEkql2J4PcFdTP35fjZ9bRfdEv3oFTrqoCv9Tds2+L8NZD3XyTPv1od5Cw0NLtN/w9Itzzf0J/dsWLEUYdfTO9Ea3w7wI3f9QV59pbWG/cBdhod+50L0NXRgl1D/4aiMipOq7IbztmlwcVg3tf2R7Kt63/3roLFtJv9ZyGy5ZRLrQR28qSdvKm5FsqPhpYeubckn17/1Yu0gIhuht1FBekGO1Vzr5Ph37cF+EY20hX45jdJf0OczwUeEyQg8w/NBCrUz6XVxFh8z1lMkIvfWKfB+LTfSO3HT/yjvcj8cl7+keBGq/t8T9CP18gGYyIQ6cR/HfS10ociGTZFlSuNLKaH2OJkoKxYJFUyJh5Ra8eE51oeOsj1XRznaQJADUz0cO1CVwSaEHHlpUNIrV0D2OmkmfbFSXxFgLhH7koCKe/doh85l7xyWEHsDbKGf4GVntfTwDFyN0f01fVyxD6NlWu/WdL+RehD7ZbSQDbX2mEbUC54g01CapstmDu+eitykjsBCgFErUT3vHhbvXQ/sxuT+O1imhA9h/KcQloyL1s7mbcYKgC3G5ifaLdmz9ZLHIfkuw1xwMdP+f9hDGStX/yA97sYN97ZGCw9c2GcMEg3VxXxOD3IP9DKHTdNJuwPnkwt1pJwtKpJeT3ab0s7watfvkYJUu6Eyh22juHGJ85MF5JhfU7LPF9bkHofvor4iBt+CFOSWJTkrqQCdprQ+5yQXor4k+IrFSoTQ+ku0w6KMh+oh3jCyhUx+sl6G8iJ95uW9utBKReCgP3HYHw6QP6n8N3VPV/8rLfTLWLEi/8Zio+DIX5ZRioQ9fiUVpo3Mg/x98lAu+9tcY3qbwXUuVDjqw9f7pHNFn+mQXzfDlprl7odNKQTLAkUxfrC0MRduC1IAKo/01R7xRS5nLLrSnETK7rY/eU/ECmxgcSz/1vD2B+Gf/Ee02kR1Oo7QirN9dpao0eqf6QFMX5ztpmAWJvMm80DRrpR8/X6dY6PI80oRLnT1+q7yH3HZZ/ee+w4y2t8idCz1VKUgZiRI0GijlxwkGz0V7XSglNGhEOx9cLqJrUbH6RKQXBdWg3Jco8NAWz6a5v+K/HtH1hZqGpkPZludzsbhkpFYXG03h1IiuRn66KxoudBK5CyxKHdKpQX3bw8gfwdsmiyXeAZQcd6GOzpcR/CMPnSRKl2C9ivaKXFHptf3Q1gvq+7kvUUBz5/CM4Ub+v1lFWfSfOmPMEDqN3AWWqmBNoTvMQPmBK/z9SMm9H7fhHvkYfaG5d3SGUnP0Jnrfxxh/7yvnIbOFnsqDKXQRxLl7bg4srbmrV11ybKGJQV7VhXpBSo2pHFQn9yUSwooOKSuqllV1SftEoSJLiZkuAr2CNYWIS7OwKDA9lzxLXxN23aqLMUIf/ikqBdkComKdHqjoJE1rsDRqV/Pr6F9dtJ+QSX9SXEdXOO2iJu7LKilScl+ixg8PzooYe2TT2v6J3CsKfUqgh9js9ETmz1oFK7o6Q+ihiIPpjmPTxRn+ZrE3Vne2YIjuGhmTVYdz0E+LN3eO5ljoVyZrksLvS36kk4lMoZwHV/6Gxv97NXl5qYh5bcJvTe7mG5ibIPwWaeb8he/jAXw38/CEnkOm0K8MTZ+K6tHMQ4OFTiFlu3J8cGXmAxZ6Aq2jZ+e/zMPl5xY6+d57Zq54HlzvO3D6bXnGGYB52PzcQmeYG4KFzhgBC50xAhY6YwQsdMYIWOiMEbDQGSNgoTNGwEJnjICFzhgBC50xAhY6YwQsdMYIWOiMEbDQGSNICZ2NbZ6Nhc5mhP0Px60c79IpSOYAAAAASUVORK5CYII=" InformativeScreenshot="6a39f4c1a6bd638b94d98fc431f5abe9.png" Reference="LZ6uGRrXXkiNGAZ-m9Hvyg/BQfAgwWJ7USxqZIMm2_AnQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='UiBank-Loan Home' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive">
                   <uix:TargetAnchorable.PointOffset>
