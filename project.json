@@ -59,6 +59,20 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "LoanApplicationUnderAged.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "a328e5b0-aa95-4588-89ad-b678136ff06d",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "LoanApplicationOverAged.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "b23ec932-0bc5-498e-a05a-58da74d30996",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "SubmitStandardLoanRequest.xaml"
       }
     ],
     "saveToCloud": false

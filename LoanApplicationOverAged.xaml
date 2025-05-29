@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestAutomationTemplate" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LoanApplicationOverAged" this:LoanApplicationOverAged.in_BrowserName="Chrome" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_BrowserName" Type="InArgument(x:String)" />
   </x:Members>
@@ -39,6 +39,7 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Testing</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -85,9 +86,10 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TestAutomationTemplate" sap:VirtualizedContainerService.HintSize="1471,1287" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LoanApplicationOverAged" sap:VirtualizedContainerService.HintSize="1471,1524" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="uix:NBrowserType" Name="BrowserType" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Assets" />
@@ -159,11 +161,11 @@
         </Assign>
       </Sequence>
     </Switch>
-    <TryCatch sap2010:Annotation.AnnotationText="Prepare to run the test:&#xA;- Prepare test data&#xA;- Prepare assets and configuration data&#xA;- Prepare the browser&#xA;- Prepare the AUT (Application Under Test)&#xA;" DisplayName="SetUp" sap:VirtualizedContainerService.HintSize="418,493" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch sap2010:Annotation.AnnotationText="Prepare to run the test:&#xA;- Prepare test data&#xA;- Prepare assets and configuration data&#xA;- Prepare the browser&#xA;- Prepare the AUT (Application Under Test)&#xA;" DisplayName="SetUp" sap:VirtualizedContainerService.HintSize="418,189" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -215,21 +217,53 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <TryCatch sap2010:Annotation.AnnotationText="Run the actual TestCase with the time constraint set by TestTimeOut" DisplayName="RunTest" sap:VirtualizedContainerService.HintSize="418,114" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch sap2010:Annotation.AnnotationText="Run the actual TestCase with the time constraint set by TestTimeOut" DisplayName="RunTest" sap:VirtualizedContainerService.HintSize="418,1060" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,805" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="LoanStatus" />
+          </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigate to Loans Page - Invoke Workflow File (UiBank Components\Navigate to Loans Page.xaml)" sap:VirtualizedContainerService.HintSize="382,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="UiBank Components\Navigate to Loans Page.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="uix:NBrowserType" x:Key="in_BrowserType">[BrowserType]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigate to Loan Application Form - Invoke Workflow File (UiBank Components\Navigate to Loan Application Form.xaml)" sap:VirtualizedContainerService.HintSize="382,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="UiBank Components\Navigate to Loan Application Form.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="uix:NBrowserType" x:Key="in_BrowserType">[BrowserType]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Submit Loan Application Form - Invoke Workflow File (UiBank Components\Submit Loan Application Form.xaml)" sap:VirtualizedContainerService.HintSize="382,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="UiBank Components\Submit Loan Application Form.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_EmailAddress">pathrudu@gmail.com</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_LoanAmount">15000</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_LoanTerms">5</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Income">35000</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Age">70</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="out_LoanStatus">[LoanStatus]</OutArgument>
+              <InArgument x:TypeArguments="uix:NBrowserType" x:Key="in_BrowserType">[BrowserType]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <uta:VerifyExpressionWithOperator KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="Loan Approval Status Validation" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="382,214" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_1" Operator="Contains" OutputMessageFormat="[LoanStatus]" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="True">
+            <uta:VerifyExpressionWithOperator.FirstExpression>
+              <InArgument x:TypeArguments="x:String">[LoanStatus]</InArgument>
+            </uta:VerifyExpressionWithOperator.FirstExpression>
+            <uta:VerifyExpressionWithOperator.SecondExpression>
+              <InArgument x:TypeArguments="x:String">["You must be at less than 65 years old for a loan"]</InArgument>
+            </uta:VerifyExpressionWithOperator.SecondExpression>
+          </uta:VerifyExpressionWithOperator>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
@@ -244,10 +278,10 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="GeneralException" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="General Exception" sap:VirtualizedContainerService.HintSize="416,346" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="General Exception" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -272,11 +306,11 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <TryCatch sap2010:Annotation.AnnotationText="Final actions after the test.&#xA;- Bring the application in the original state&#xA;- Delete created test data&#xA;- Log out&#xA;- Save test results in other formats&#xA;- Check for application errors" DisplayName="TearDown" sap:VirtualizedContainerService.HintSize="418,600" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <TryCatch sap2010:Annotation.AnnotationText="Final actions after the test.&#xA;- Bring the application in the original state&#xA;- Delete created test data&#xA;- Log out&#xA;- Save test results in other formats&#xA;- Check for application errors" DisplayName="TearDown" sap:VirtualizedContainerService.HintSize="418,195" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
