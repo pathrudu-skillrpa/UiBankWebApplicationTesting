@@ -12,7 +12,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "25.0.161.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.202576003",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -54,22 +54,25 @@
         "fileName": ".templates\\TestAutomationTemplate.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "39e3457d-c5a5-4f9a-a140-625fa920df0c",
+        "dataVariationFilePath": ".variations\\LoanApplicationData_LoanApplicationUnderAged.json",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "LoanApplicationUnderAged.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "a328e5b0-aa95-4588-89ad-b678136ff06d",
+        "dataVariationFilePath": ".variations\\LoanApplicationData_LoanApplicationOverAged.json",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "LoanApplicationOverAged.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "b23ec932-0bc5-498e-a05a-58da74d30996",
+        "dataVariationFilePath": ".variations\\LoanApplicationData_SubmitStandardLoanRequest.json",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "SubmitStandardLoanRequest.xaml"

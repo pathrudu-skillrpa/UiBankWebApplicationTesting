@@ -1,0 +1,16 @@
+{
+  "dataVariationFileInfo": [
+    {
+      "filePath": ".variations\\LoanApplicationData_LoanApplicationOverAged.json",
+      "dataVariationType": "File"
+    },
+    {
+      "filePath": ".variations\\LoanApplicationData_LoanApplicationUnderAged.json",
+      "dataVariationType": "File"
+    },
+    {
+      "filePath": ".variations\\LoanApplicationData_SubmitStandardLoanRequest.json",
+      "dataVariationType": "File"
+    }
+  ]
+}

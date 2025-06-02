@@ -111,14 +111,14 @@
       <AssemblyReference>UiPath.Testing</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Submit_Loan_Application_Form" sap:VirtualizedContainerService.HintSize="1471,2488" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Submit_Loan_Application_Form" sap:VirtualizedContainerService.HintSize="1129,2488" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <uix:NSetRuntimeBrowser BrowserType="[in_BrowserType]" DisplayName="Set Runtime Browser" sap:VirtualizedContainerService.HintSize="484,119" sap2010:WorkflowViewState.IdRef="NSetRuntimeBrowser_1" Version="V4" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="LoanApplicationScreen" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,1862" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="b773fce3-8005-4f71-905f-661bb5ad6197" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="LoanApplicationScreen" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,1862" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="b773fce3-8005-4f71-905f-661bb5ad6197" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -253,7 +253,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="LoanResultScreen" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,484" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="dd8dc197-c5d2-48bf-8469-1e436de1287b" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="LoanResultScreen" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,484" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="dd8dc197-c5d2-48bf-8469-1e436de1287b" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

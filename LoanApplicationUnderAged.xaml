@@ -1,6 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LoanApplicationUnderAged" this:LoanApplicationUnderAged.in_BrowserName="Edge" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LoanApplicationUnderAged" this:LoanApplicationUnderAged.EmailAddress="pathrudu@gmail.com" this:LoanApplicationUnderAged.LoanAmount="10000" this:LoanApplicationUnderAged.LoanTerms="3" this:LoanApplicationUnderAged.YearlyIncome="35000" this:LoanApplicationUnderAged.Age="17" this:LoanApplicationUnderAged.BrowserType="Chrome" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_BrowserName" Type="InArgument(x:String)" />
+    <x:Property Name="EmailAddress" Type="InArgument(x:String)" />
+    <x:Property Name="LoanAmount" Type="InArgument(x:String)" />
+    <x:Property Name="LoanTerms" Type="InArgument(x:String)" />
+    <x:Property Name="YearlyIncome" Type="InArgument(x:String)" />
+    <x:Property Name="Age" Type="InArgument(x:String)" />
+    <x:Property Name="BrowserType" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -100,16 +105,16 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LoanApplicationUnderAged" sap:VirtualizedContainerService.HintSize="1471,2554" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LoanApplicationUnderAged" sap:VirtualizedContainerService.HintSize="1471,3309" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="uix:NBrowserType" Name="BrowserType" />
+      <Variable x:TypeArguments="uix:NBrowserType" Name="varBrowserType" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[in_BrowserName]" sap:VirtualizedContainerService.HintSize="418,57" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[BrowserType]" sap:VirtualizedContainerService.HintSize="470,812" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Switch.Default>
         <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
@@ -119,7 +124,7 @@
           </sap:WorkflowViewStateService.ViewState>
           <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_4">
             <Assign.To>
-              <OutArgument x:TypeArguments="uix:NBrowserType">[BrowserType]</OutArgument>
+              <OutArgument x:TypeArguments="uix:NBrowserType">[varBrowserType]</OutArgument>
             </Assign.To>
             <Assign.Value>
               <InArgument x:TypeArguments="uix:NBrowserType">[DefaultSystemBrowser.BrowserType]</InArgument>
@@ -129,19 +134,20 @@
       </Switch.Default>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence x:Key="Chrome" DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <Sequence x:Key="Chrome" DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,25" sap2010:WorkflowViewState.IdRef="Sequence_10">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_1">
           <Assign.To>
-            <OutArgument x:TypeArguments="uix:NBrowserType">[BrowserType]</OutArgument>
+            <OutArgument x:TypeArguments="uix:NBrowserType">[varBrowserType]</OutArgument>
           </Assign.To>
           <Assign.Value>
             <InArgument x:TypeArguments="uix:NBrowserType">[NBrowserType.Chrome]</InArgument>
@@ -156,7 +162,7 @@
         </sap:WorkflowViewStateService.ViewState>
         <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_2">
           <Assign.To>
-            <OutArgument x:TypeArguments="uix:NBrowserType">[BrowserType]</OutArgument>
+            <OutArgument x:TypeArguments="uix:NBrowserType">[varBrowserType]</OutArgument>
           </Assign.To>
           <Assign.Value>
             <InArgument x:TypeArguments="uix:NBrowserType">[NBrowserType.Edge]</InArgument>
@@ -171,7 +177,7 @@
         </sap:WorkflowViewStateService.ViewState>
         <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_3">
           <Assign.To>
-            <OutArgument x:TypeArguments="uix:NBrowserType">[BrowserType]</OutArgument>
+            <OutArgument x:TypeArguments="uix:NBrowserType">[varBrowserType]</OutArgument>
           </Assign.To>
           <Assign.Value>
             <InArgument x:TypeArguments="uix:NBrowserType">[NBrowserType.Firefox]</InArgument>
@@ -179,7 +185,7 @@
         </Assign>
       </Sequence>
     </Switch>
-    <TryCatch sap2010:Annotation.AnnotationText="Prepare to run the test:&#xA;- Prepare test data&#xA;- Prepare assets and configuration data&#xA;- Prepare the browser&#xA;- Prepare the AUT (Application Under Test)&#xA;" DisplayName="SetUp" sap:VirtualizedContainerService.HintSize="418,493" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch sap2010:Annotation.AnnotationText="Prepare to run the test:&#xA;- Prepare test data&#xA;- Prepare assets and configuration data&#xA;- Prepare the browser&#xA;- Prepare the AUT (Application Under Test)&#xA;" DisplayName="SetUp" sap:VirtualizedContainerService.HintSize="470,493" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -191,7 +197,7 @@
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Run SetUp" sap:VirtualizedContainerService.HintSize="416,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="TestFramework\SetUp.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Assets" />
-            <InArgument x:TypeArguments="uix:NBrowserType" x:Key="in_BrowserType">[BrowserType]</InArgument>
+            <InArgument x:TypeArguments="uix:NBrowserType" x:Key="in_BrowserType">[varBrowserType]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </TryCatch.Try>
@@ -235,7 +241,7 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <TryCatch sap2010:Annotation.AnnotationText="Run the actual TestCase with the time constraint set by TestTimeOut" DisplayName="RunTest" sap:VirtualizedContainerService.HintSize="418,1381" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch sap2010:Annotation.AnnotationText="Run the actual TestCase with the time constraint set by TestTimeOut" DisplayName="RunTest" sap:VirtualizedContainerService.HintSize="470,1381" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -255,23 +261,23 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigate to Loans Page - Invoke Workflow File (UiBank Components\Navigate to Loans Page.xaml)" sap:VirtualizedContainerService.HintSize="382,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="UiBank Components\Navigate to Loans Page.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="uix:NBrowserType" x:Key="in_BrowserType">[BrowserType]</InArgument>
+              <InArgument x:TypeArguments="uix:NBrowserType" x:Key="in_BrowserType">[varBrowserType]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigate to Loan Application Form - Invoke Workflow File (UiBank Components\Navigate to Loan Application Form.xaml)" sap:VirtualizedContainerService.HintSize="382,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="UiBank Components\Navigate to Loan Application Form.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="uix:NBrowserType" x:Key="in_BrowserType">[BrowserType]</InArgument>
+              <InArgument x:TypeArguments="uix:NBrowserType" x:Key="in_BrowserType">[varBrowserType]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Submit Loan Application Form - Invoke Workflow File (UiBank Components\Submit Loan Application Form.xaml)" sap:VirtualizedContainerService.HintSize="382,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="UiBank Components\Submit Loan Application Form.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_EmailAddress">pathrudu@gmail.com</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_LoanAmount">15000</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_LoanTerms">5</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_Income">35000</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_Age">16</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_EmailAddress">[EmailAddress]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_LoanAmount">[LoanAmount]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_LoanTerms">[LoanTerms]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Income">[YearlyIncome]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Age">[Age]</InArgument>
               <OutArgument x:TypeArguments="x:String" x:Key="out_LoanStatus">[LoanStatus]</OutArgument>
-              <InArgument x:TypeArguments="uix:NBrowserType" x:Key="in_BrowserType">[BrowserType]</InArgument>
+              <InArgument x:TypeArguments="uix:NBrowserType" x:Key="in_BrowserType">[varBrowserType]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <uta:VerifyExpressionWithOperator KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" AlternativeVerificationTitle="Loan Approval Status Validation" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="382,214" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_1" Operator="Contains" OutputMessageFormat="[LoanStatus]" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="True">
@@ -324,7 +330,7 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <TryCatch sap2010:Annotation.AnnotationText="Final actions after the test.&#xA;- Bring the application in the original state&#xA;- Delete created test data&#xA;- Log out&#xA;- Save test results in other formats&#xA;- Check for application errors" DisplayName="TearDown" sap:VirtualizedContainerService.HintSize="418,600" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <TryCatch sap2010:Annotation.AnnotationText="Final actions after the test.&#xA;- Bring the application in the original state&#xA;- Delete created test data&#xA;- Log out&#xA;- Save test results in other formats&#xA;- Check for application errors" DisplayName="TearDown" sap:VirtualizedContainerService.HintSize="470,600" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -335,7 +341,7 @@
       <TryCatch.Try>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Run TearDown" sap:VirtualizedContainerService.HintSize="416,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="TestFramework\TearDown.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="uix:NBrowserType" x:Key="in_BrowserType">[BrowserType]</InArgument>
+            <InArgument x:TypeArguments="uix:NBrowserType" x:Key="in_BrowserType">[varBrowserType]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </TryCatch.Try>
