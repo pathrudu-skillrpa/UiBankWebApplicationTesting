@@ -11,6 +11,18 @@
     {
       "filePath": ".variations\\LoanApplicationData_SubmitStandardLoanRequest.json",
       "dataVariationType": "File"
+    },
+    {
+      "filePath": ".variations\\UiBankLoanApplication_LoanApplicationOverAgedDataService.json",
+      "dataVariationType": "Entity"
+    },
+    {
+      "filePath": ".variations\\UiBankLoanApplication_LoanApplicationUnderAgedDataService.json",
+      "dataVariationType": "Entity"
+    },
+    {
+      "filePath": ".variations\\UiBankLoanApplication_SubmitStandardLoanRequestDataService.json",
+      "dataVariationType": "Entity"
     }
   ]
 }

@@ -4,15 +4,21 @@
   "description": "Test Automation Project to Test Functionalities of UiBank Application",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.DataService.Activities": "[25.2.0]",
     "UiPath.System.Activities": "[25.2.1]",
     "UiPath.Testing.Activities": "[24.10.4]",
     "UiPath.UIAutomation.Activities": "[25.10.4]"
   },
   "webServices": [],
-  "entitiesStores": [],
+  "entitiesStores": [
+    {
+      "serviceDocument": ".entities/EntitiesStore.json",
+      "namespace": "UiBankApplicationTesting"
+    }
+  ],
   "schemaVersion": "4.0",
   "studioVersion": "25.0.161.0",
-  "projectVersion": "1.0.202576003",
+  "projectVersion": "1.0.202663842",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -76,6 +82,27 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "SubmitStandardLoanRequest.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "dc79d180-c3e7-43c0-825d-92cab11d9c2e",
+        "dataVariationFilePath": ".variations\\UiBankLoanApplication_LoanApplicationOverAgedDataService.json",
+        "testCaseType": "TestCase",
+        "fileName": "LoanApplicationOverAged - Data Service.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "f96390ec-08b4-401c-b794-591c0f20c348",
+        "dataVariationFilePath": ".variations\\UiBankLoanApplication_LoanApplicationUnderAgedDataService.json",
+        "testCaseType": "TestCase",
+        "fileName": "LoanApplicationUnderAged - Data Service.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "4d043ec0-4c80-4120-ba35-eddb495d4ade",
+        "dataVariationFilePath": ".variations\\UiBankLoanApplication_SubmitStandardLoanRequestDataService.json",
+        "testCaseType": "TestCase",
+        "fileName": "SubmitStandardLoanRequest - Data Service.xaml"
       }
     ],
     "saveToCloud": false
